@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini LMS</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        /* Style for the courses */
+        .course {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .course h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .course p {
+            margin-bottom: 5px;
+            color: #666;
+        }
+        .course a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .course a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Mini LMS</h1>
+        <p>Below are the available courses:</p>
+        <!-- Course 1 -->
+        <div class="course">
+            <h2>INTPROG</h2>
+            <p>Integrative Prog Technologies</p>
+            <a href="course/course.html">Open Course</a>
+        </div>
+        <!-- Course 2 -->
+        <div class="course">
+            <h2>DATABASE</h2>
+            <p>Information Management</p>
+            <p><a routerLink="course.html">Ooi</a></p>
+        </div>
+        <!-- Course 3 -->
+        <div class="course">
+            <h2>ELNET</h2>
+            <p>IT Elective</p>
+            <a href="course.html">Open Course</a>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<div class="app-container" [ngClass]="{ 'bg-light': account }">
+  <!-- main nav -->
+  <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="account">
+    <div class="navbar-nav">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-item nav-link">Home</a>
+        <a routerLink="/profile" routerLinkActive="active" class="nav-item nav-link">Profile</a>
+        <a *ngIf="account.role === Role.Admin" routerLink="/admin" routerLinkActive="active" class="nav-item nav-link">Admin</a>
+        <a (click)="logout()" class="nav-item nav-link">Logout</a>
+        <a routerLink="/messages" routerLinkActive="active"  class="nav-item nav-link">Messages</a>
+        <a routerLink="/notification" routerLinkActive="active"  class="nav-item nav-link">Notification</a>
+    </div>
+
+    <!-- Move the search container here -->
+
+    <div class="search-form-wrapper">
+      <form class="search-form" id="" action="">
+         <div class="input-group">
+            <input type="text" name="search" class="search form-control" placeholder="Search...">
+            <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>
+            <span class="input-group-addon" id="basic-addon2"><i class="fa fa-window-close" aria-hidden="true"></i>
+            </span>
+         </div>
+      </form>
+   </div>
+
+
+
+
+</nav>
+
+
+  <!-- subnav router outlet -->
+  <router-outlet name="subnav"></router-outlet>
+
+  <!-- global alert -->
+  <alert></alert>
+
+  <!-- main router outlet -->
+  <router-outlet></router-outlet>
+</div>
